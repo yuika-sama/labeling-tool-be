@@ -12,7 +12,13 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 // Middleware
-app.use(cors());
+const cors = require('cors');
+app.use(cors({
+  origin: [
+    'http://localhost:5173',
+    'https://labeling-tool-fe.vercel.app'  // Thêm Vercel domain
+  ]
+}));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
