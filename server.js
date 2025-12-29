@@ -15,7 +15,7 @@ const PORT = process.env.PORT || 5000;
 app.use(cors({
   origin: [
     'http://localhost:5173',
-    'https://labeling-tool-fe.vercel.app'  // Thêm Vercel domain
+    'https://labeling-tool-fe.vercel.app'
   ]
 }));
 app.use(express.json());

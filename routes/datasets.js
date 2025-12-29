@@ -214,7 +214,7 @@ router.post('/:id/files', authenticate, authorize('admin'), upload.array('files'
 
       console.log(`Uploading file ${i + 1}/${files.length}: ${file.originalname}`);
 
-      // Dùng supabaseAdmin để bypass RLS policies
+      // bypass RLS policies
       const { data: uploadData, error: uploadError } = await supabaseAdmin.storage
         .from('dataset-files')
         .upload(filePath, file.buffer, {
@@ -319,7 +319,7 @@ router.delete('/:id/files/:fileId', authenticate, authorize('admin'), async (req
   }
 });
 
-// Lấy tất cả câu trả lời cho dataset (chỉ admin) - grouped by submissions
+// Lấy tất cả câu trả lời cho dataset (chỉ admin) 
 router.get('/:id/answers', authenticate, authorize('admin'), async (req, res) => {
   try {
     const { id } = req.params;
