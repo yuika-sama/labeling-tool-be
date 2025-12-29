@@ -1,4 +1,9 @@
-# Backend API - Labeling Tool
+# Tool Gán Nhãn Dữ Liệu - Labeling Tool - Backend side
+
+Tool gán nhãn dữ liệu với phân quyền Admin/User, lưu trữ trên Supabase, và backend API riêng biệt.
+
+## Thành viên thực hiện (GROUP CVF25PRJ01)
+* Nguyễn Đức Anh - B22DCPT009
 
 ## Cấu trúc Database (Supabase)
 
